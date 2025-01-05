@@ -1,0 +1,9 @@
+@import "../variables.css";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  grid-area: footer;
+  padding: var(--spacing-base);
+  width: 100vw;
+}

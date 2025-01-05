@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function HomePage() {
   return (
     <div className="homePage">
-      <Footer />
+      <h1>Home Page</h1>
     </div>
   );
 }

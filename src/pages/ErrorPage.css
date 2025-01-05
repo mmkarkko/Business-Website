@@ -1,0 +1,9 @@
+@import '../variables.css';
+
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vw;
+  align-items: center;
+}

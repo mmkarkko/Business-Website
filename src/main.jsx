@@ -6,15 +6,16 @@ import AboutPage from './pages/AboutPage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import App from './App.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
+    element: <App/>,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "about",
-        element: <AboutPage />
+        index: true,
+        element: <HomePage />
       }
       // Tähän voit lisätä muut reitit, esim:
       // {

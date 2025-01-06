@@ -2,5 +2,16 @@
   grid-area: main;
   width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#orangeBar {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  width: 100vw;
   justify-content: center;
+  text-align: center;
+
+  padding: 1.5rem 0;
 }

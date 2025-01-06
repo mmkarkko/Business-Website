@@ -1,5 +1,6 @@
 @import "./variables.css";
 
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
   width: 100vw;
   height: 100vh;
   justify-content: center;
+
 }
 
 
@@ -18,8 +20,8 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: var(--font-body);
-  color: var(--color-primary);
-  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+  /* background-color: var(--color-background-dark); */
   font-size: var(--font-size-xlarge);
   display: grid;
   grid-template-areas:
@@ -27,7 +29,7 @@ body {
     "main"
     "footer"
   ;
-  grid-template-rows: 5rem auto 10rem;
+  grid-template-rows: 5rem auto 5rem;
   min-height: 100vh;
   justify-content: center;
 }
@@ -36,6 +38,7 @@ h1 {
   font-size: var(--font-size-heading-xlarge);
   font-family: var(--font-headline);
   color: var(--color-highlight);
+  text-align: center;
 }
 h2 {
   font-size: var(--font-size-subheading-xlarge);

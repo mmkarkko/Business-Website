@@ -6,8 +6,8 @@
   align-items: center;
   position: absolute;
   top: 5rem;
-  right: 10px;
-  min-width: 200px;
+  right: 0;
+  width: 100%;
   background-color: var(--color-background);
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(149, 149, 149, 0.5);

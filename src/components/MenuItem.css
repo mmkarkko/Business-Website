@@ -6,9 +6,9 @@
   font-size: var(--font-size-subheading);
   font-family: var(--font-body);
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .menuItem.visited {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }

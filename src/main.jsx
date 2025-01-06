@@ -6,7 +6,7 @@ import AboutPage from './pages/AboutPage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import App from './App.jsx';
 import "./variables.css";
-
+import 'animate.css';
 
 const router = createBrowserRouter([
   {
@@ -33,3 +33,4 @@ ReactDOM
         <RouterProvider router={router} />
       </React.StrictMode>
     );
+    

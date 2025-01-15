@@ -12,6 +12,11 @@
   width: 100vw;
   justify-content: center;
   text-align: center;
-
   padding: 1.5rem 0;
+}
+
+.slogan {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }

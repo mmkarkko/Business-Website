@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client'
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from './pages/HomePage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
+import ServicesPage from './pages/ServicesPage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import App from './App.jsx';
 import "./variables.css";
@@ -17,12 +17,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />
+      },
+      {
+         path: "palvelut",
+        element: <ServicesPage />
       }
-      // Tähän voit lisätä muut reitit, esim:
-      // {
-      //   path: "about",
-      //   element: <AboutPage />
-      // }
     ]
   }
 ]);

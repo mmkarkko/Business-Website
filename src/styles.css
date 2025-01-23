@@ -35,14 +35,23 @@ body {
 }
 
 h1 {
-  font-size: var(--font-size-heading-xlarge);
+  font-size: var(--font-size-heading);
   font-family: var(--font-headline);
   color: var(--color-highlight);
   text-align: center;
 }
+
 h2 {
-  font-size: var(--font-size-subheading-xlarge);
+  font-size: var(--font-size-heading);
+  font-family: var(--font-headline);
+  color: var(--color-highlight);
+  text-align: center;
 }
+
+h3 {
+
+}
+
 p {
   font-size: var(--font-size-body-xlarge);
 }

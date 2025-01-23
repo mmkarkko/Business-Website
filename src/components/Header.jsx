@@ -2,7 +2,7 @@ import "./Header.css";
 import Menu from "./Menu";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
-import logo from "../assets/arkkomatic_logo.png";
+import logo from "../assets/arkkoMatic-logo-shadow_text-as-path-optimized.svg";
 import { Link } from "react-router-dom";
 
 export default function Header() {

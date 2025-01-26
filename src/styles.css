@@ -9,18 +9,16 @@
 
 body {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
 }
-
 
 .App {
   width: 100vw;
-  height: 100vh;
   font-family: var(--font-body);
   color: var(--color-primary-dark);
-  /* background-color: var(--color-background-dark); */
+
   font-size: var(--font-size-xlarge);
   display: grid;
   grid-template-areas:
@@ -28,9 +26,8 @@ body {
     "main"
     "footer"
   ;
-  grid-template-rows: 5rem auto 5rem;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  justify-content: center;
 }
 
 h1 {

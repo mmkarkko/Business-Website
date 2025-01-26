@@ -6,11 +6,12 @@
   align-items: center;
   grid-area: footer;
   width: 100vw;
+  padding-top: 1rem;
 }
 
 .contact-container {
   text-align: center;
-  padding-bottom: 1rem;
+  
 }
 
 .contact-container p {

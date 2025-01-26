@@ -17,15 +17,28 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-    return (
-        <div id="header">
-          <div id="logo">
-            <Link to="/"><img src={logo} alt="Logo" /></Link>
-          </div>
-          <div id="burger-container">
-            {isMenuOpen ? <FiX className="menu-icon" onClick={handleMenuClick} /> : <FiMenu className="menu-icon" onClick={handleMenuClick}/>}
-            {isMenuOpen ? <Menu setIsMenuOpen={setIsMenuOpen} /> : null }
-          </div>
+  return (
+    <div id="header">
+      <div id="logo">
+        <Link to="/"><img src={logo} alt="Logo" /></Link>
+      </div>
+      <div id="burger-container">
+        {/* Show menu icon only on small screens */}
+        <div className="menu-icon-container">
+          {isMenuOpen ? (
+            <FiX className="menu-icon" onClick={handleMenuClick} />
+          ) : (
+            <FiMenu className="menu-icon" onClick={handleMenuClick} />
+          )}
         </div>
-    );
+        {/* Conditionally render the Menu on small screens */}
+        {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
+      </div>
+
+      {/* On large screens, the Menu is always visible as horizontal navigation */}
+      <div className="desktop-menu">
+        <Menu setIsMenuOpen={setIsMenuOpen} />
+      </div>
+    </div>
+  );
 }

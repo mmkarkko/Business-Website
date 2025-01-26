@@ -13,6 +13,7 @@
   box-shadow: 0 4px 8px rgba(149, 149, 149, 0.5);
   z-index: 1000;
   padding: 1rem 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 469px) and (max-width: 768px) {
@@ -21,10 +22,26 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .menu {
-    width: 15rem;
+    width: 20rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  
+  .menu {
+    display: flex;
+    flex-direction: row; /* Horizontal navigation */
+    justify-content: flex-start;
+    align-items: center;
+    position: static;
+    width: auto;
+    top: auto;
+    right: auto;
+    background-color: transparent; /* Remove background */
+    box-shadow: none; /* Remove shadow */
+    padding: 0;
+  }
+
+  .menuItem {
+
+  }
 }

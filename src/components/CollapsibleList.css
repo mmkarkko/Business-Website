@@ -59,9 +59,7 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  #collapsible-container {
-    width: 100%;
-  }
+
 }
 
 @media screen and (min-width: 1025px) {

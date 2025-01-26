@@ -12,13 +12,13 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  color: var(--color-primary-dark);
 }
 
 .App {
   width: 100vw;
   font-family: var(--font-body);
   color: var(--color-primary-dark);
-
   font-size: var(--font-size-xlarge);
   display: grid;
   grid-template-areas:

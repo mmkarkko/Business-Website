@@ -13,3 +13,15 @@
 .menuItem.visited {
   color: var(--color-primary-dark);
 }
+
+/* Ensure horizontal layout for desktop */
+@media screen and (min-width: 1025px) {
+  .menuItem {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+
+  .menuItem.active {
+    color: var(--color-highlight);
+  }
+}

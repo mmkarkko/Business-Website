@@ -8,6 +8,9 @@ export default function HomePage() {
         <div id="orangeBar">
           <h3 className="animate__animated animate__fadeInDown animate__delay-2s slogan">Virtaa ja älyä, sopivassa suhteessa.</h3>
         </div>
+        <div className="hero-container">
+          <p id="heroText"></p>
+        </div>
       </div>
   );
 }

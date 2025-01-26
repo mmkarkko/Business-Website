@@ -4,8 +4,73 @@ import { ChevronDown, ChevronUp } from "react-feather";
 import { useState } from "react";
 
 export default function CollapsibleList() {
-  const items = ["Sähkö", "Mekaniikka", "Hydrauliikka", "Pneumatiikka", "Prosessiteollisuus", "Tuotantolaitteet", "Sähkönjakelujärjestelmät"];
+  //const items = ["Sähkö", "Mekaniikka", "Hydrauliikka", "Pneumatiikka", "Prosessiteollisuus", "Tuotantolaitteet", "Sähkönjakelujärjestelmät"];
   const [openIndex, setOpenIndex] = useState(null);
+
+  const listItems = [
+    {
+      title: "Sähkö",
+      content: [
+        "Hätäpoistumistie-, turvavalotarkastukset, huollot",
+        "Vanhat releohjaukset",
+        "Logiikat",
+        "Hätäseis-järjestelmät",
+        "Ajastukset",
+        "Askelmoottorit",
+      ],
+    },
+    {
+      title: "Mekaniikka",
+      content: [
+        "Linjaukset",
+        "Laakeroinnit",
+        "Pienet metallityöt",
+      ],
+    },
+    {
+      title: "Hydrauliikka",
+      content: [
+        "Hydrauliset linjat",
+        "Pumppujen huolto",
+        "Varaosat",
+      ],
+    },
+    {
+      title: "Pneumatiikka",
+      content: [
+        "Mittaukset",
+        "Paineilmaohjaukset",
+        "Paineilmalogiikat",
+      ]
+    }, 
+    {
+      title: "Prosessiteollisuus",
+      content: [
+        "Kappaletavara-automaatio",
+        "Taajuusmuuttajat",
+        "Vianhaku",
+        "Korjaukset",
+        "Huollot",
+        "Säädöt",
+        "Modernisoinnit",
+      ]
+    }, 
+    {
+      title: "Tuotantolaitteet",
+      content: [
+        "CNC-työstökoneet",
+        "Robotit",
+        "Magnetointilaitteet",
+        "Uunit",
+        "Ohjaukset",
+        "Korjaukset",
+        "vianhaku",
+        "Huollot",
+        "Säädöt",
+        "Modernisoinnit",
+      ]
+    }
+  ];
 
   const toggleItem = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -13,7 +78,7 @@ export default function CollapsibleList() {
 
   return (
     <div id="collapsible-container">
-      {items.map((item, index) => (
+      {listItems.map((item, index) => (
         <div
           key={index}
           className={`collapsible-item ${openIndex === index ? 'open' : ''}`}
@@ -22,15 +87,19 @@ export default function CollapsibleList() {
             onClick={() => toggleItem(index)}
             className="collapsible-header"
           >
-            <span>{item}</span>
+            <span>{item.title}</span>
             {openIndex === index ? <ChevronUp size={30} /> : <ChevronDown size={30} />}
           </div>
           <div 
             className={`collapsible-content ${openIndex === index ? 'open' : ''}`}
           >
-            <div className="content-inner">
-              {openIndex === index && <p>Tämä on {item.toLowerCase()} sisältö.</p>}
-            </div>
+            {openIndex === index && (
+              <ul className="collapsible-list">
+                {item.content.map((contentItem, index) => (
+                  <li key={index} className="collapsible-list-item">{contentItem}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       ))}

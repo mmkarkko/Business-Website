@@ -1,0 +1,47 @@
+@import "../variables.css";
+
+#collapsible-container {
+  width: 100%;
+}
+
+.collapsible-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  font-family: var(--font-headline);
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.collapsible-item {
+  background-color: var(--color-primary);
+}
+
+.collapsible-content {
+  background-color: var(--color-primary);
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.collapsible-content.open {
+  height: auto; /* Varmistaa, että elementti kasvaa tarpeen mukaan */
+  opacity: 1;
+  transition: height 0.4s ease-in, opacity 0.4s ease-in;
+}
+
+.content-inner {
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.collapsible-content.open .content-inner {
+  opacity: 1;
+  transform: translateY(0);
+}

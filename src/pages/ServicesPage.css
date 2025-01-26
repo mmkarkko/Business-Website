@@ -7,12 +7,3 @@
 #services-header {
   margin-bottom: 2rem;
 }
-
-.collapsible {
-  background-color: var(--color-highlight);
-  color: var(--color-primary);
-  font-family: var(--font-body);
-  font-size: var(--font-size-subheading);
-  padding: 0.5rem 0 0.5rem 1rem;
-  border-bottom: 1px solid var(--color-primary);
-}

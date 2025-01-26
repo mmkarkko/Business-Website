@@ -14,3 +14,17 @@
   z-index: 1000;
   padding: 1rem 0;
 }
+
+@media screen and (min-width: 469px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    width: 15rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  
+}

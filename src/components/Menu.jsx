@@ -34,7 +34,7 @@ export default function Menu({ setIsMenuOpen }) {
   return (
     <div className="menu" ref={menuRef}>
       {menuItems.map((item) => (
-        <MenuItem key={uuidv4()} item={item}  />
+        <MenuItem key={uuidv4()} className="menuItem" item={item}  />
       ))}
     </div>
   );

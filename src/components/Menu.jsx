@@ -4,14 +4,14 @@ import MenuItem from "./MenuItem";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Menu({ setIsMenuOpen }) {
-  const menuItems = [{ text: "Etusivu", link: "/"}, { text: "Palvelut", link: "./Palvelut" },];
+  const menuItems = [{ text: "Etusivu", link: "/"}, { text: "Palvelut", link: "/Palvelut" },];
   const menuRef = useRef();
 
     // Click/touch outside the dropdown menu closes the dropdown menu
     useEffect(() => {
       const handleClickOutside = (event) => {
         // Check if click/touch target was icon or it's children
-        const isClickOnIcon = event.target.closest('.menu-icon');
+        const isClickOnIcon = event.target.closest('.menuItem');
   
         if (isClickOnIcon) {
           return;

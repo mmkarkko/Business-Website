@@ -18,11 +18,10 @@
 
 #frontPageImage {
   width: 100vw;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
   object-position: 70% 50%;
 }
-
 
 .slogan {
   font-family: var(--font-headline);
@@ -30,12 +29,23 @@
   letter-spacing: 0.1rem;
 }
 
+.hero-text {
+  margin: 2rem 0;
+}
+
 @media screen and (min-width: 1025px) {
   #frontPageImage {
     width: 100vw;
-    height: 420px;
+    height:280px;
     object-fit: cover;
     object-position: 70% 50%;
+  }
+
+  .hero-container {
+    width: 50vw;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0 2rem;
   }
 
 }

@@ -16,6 +16,7 @@ export default function Footer() {
     <div className="footer">
       <div className="contact-container">
         <img src={logo} id="footer-logo"></img>
+        <p id="contact-name"><strong>Jussi Arkko</strong></p>
         <p id="contact-email"><a href={`mailto:${email}`}>{email}</a></p>
         <p id="contact-phone"><a href={`tel:${fullNumber}`}>{fullNumber}</a></p>
         <p id="companyID">Y-tunnus: 1975726-5</p>

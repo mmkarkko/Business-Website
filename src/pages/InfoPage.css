@@ -10,6 +10,35 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-left {
+  float: left;
+  width: 600px;
+  padding-top: 1rem;
+}
+
+.info-right {
+  float: right;
+}
+
+.info-right img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin:  0 0 0 3rem;
+}
+
+.info-text {
+  margin: 1rem;
 }
 
 #info-header {
@@ -24,5 +53,9 @@
 }
 
 @media screen and (min-width: 1025px) {
+  .info-text {
 
+    text-align: center;
+    margin: 1rem 0;
+  }
 }

@@ -1,6 +1,5 @@
 @import "./variables.css";
 
-
 * {
   margin: 0;
   padding: 0;
@@ -44,10 +43,6 @@ h2 {
   text-align: center;
 }
 
-h3 {
-
-}
-
 p {
   font-size: var(--font-size-body-xlarge);
 }
@@ -68,5 +63,5 @@ p {
 }
 
 @media screen and (min-width: 1025px) {
-  
+
 }

@@ -16,8 +16,26 @@
   padding: 1.5rem 0;
 }
 
+#frontPageImage {
+  width: 100vw;
+  height: 200px;
+  object-fit: cover;
+  object-position: 70% 50%;
+}
+
+
 .slogan {
   font-family: var(--font-headline);
   font-weight: 400;
   letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 1025px) {
+  #frontPageImage {
+    width: 100vw;
+    height: 420px;
+    object-fit: cover;
+    object-position: 70% 50%;
+  }
+
 }

@@ -4,7 +4,7 @@ import MenuItem from "./MenuItem";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Menu({ setIsMenuOpen }) {
-  const menuItems = [{ text: "Etusivu", link: "/"}, { text: "Palvelut", link: "/Palvelut" },];
+  const menuItems = [{ text: "Etusivu", link: "/"}, { text: "Palvelut", link: "/Palvelut" }, { text: "Tietoja", link: "/Tietoja"}];
   const menuRef = useRef();
 
     // Click/touch outside the dropdown menu closes the dropdown menu

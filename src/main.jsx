@@ -7,6 +7,7 @@ import ErrorPage from './pages/ErrorPage.jsx';
 import App from './App.jsx';
 import "./variables.css";
 import 'animate.css';
+import InfoPage from './pages/InfoPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
          path: "palvelut",
         element: <ServicesPage />
+      },
+      {
+        path: "tietoja",
+        element: <InfoPage />
       }
     ]
   }

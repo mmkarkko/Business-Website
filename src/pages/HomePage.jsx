@@ -1,16 +1,25 @@
 import "./HomePage.css";
 import placeholder from "../assets/placeholder2.jpg";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function HomePage() {
+  const { i18n } = useTranslation();
+
   return (
       <div className="homePage">
         <img id="frontPageImage" src={placeholder} width={"100%"} />
         <div id="orangeBar">
-          <h3 className="animate__animated animate__fadeInDown animate__delay-2s slogan">Virtaa ja älyä, sopivassa suhteessa.</h3>
+          <h3 className="animate__animated animate__fadeInDown animate__delay-2s slogan">
+            <Trans i18nKey="orange-bar" key="i18n.language" />
+          </h3>
         </div>
         <div className="hero-container">
-          <p className="hero-text"><strong>Sähköautomaatio- ja kunnossapitopalvelut tuotantolaitteiden ja prosessiteollisuuden parissa<br /> – yli 15 vuoden kokemuksella.</strong></p>
-          <p className="hero-text"><strong>Arkkomatic</strong> tarjoaa asiantuntevaa ja luotettavaa sähkö- ja automaatioratkaisua, jotka parantavat teollisuusprosessien sujuvuutta. Oli kyseessä uusien järjestelmien suunnittelu, käyttöönotto tai vianetsintä, olen täällä auttamassa.</p>
+          <p className="hero-text">
+            <Trans i18nKey="hero-text-upper" key="i18n.language" components={{ strong: <strong/>}} />
+          </p>
+          <p className="hero-text">
+            <Trans i18nKey="hero-text-lower" key="i18n.language" components={{ strong: <strong/>}} />
+          </p>
         </div>
       </div>
   );

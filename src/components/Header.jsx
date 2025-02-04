@@ -4,10 +4,18 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import logo from "../assets/arkkoMatic-logo-shadow_text-as-path-optimized.svg";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const location = useLocation();
+
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const currentLanguage = i18n.language;
+    console.log(`Current language: ${currentLanguage}`);
+  }, [i18n.language]);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -17,10 +25,24 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language)
+      .then(() => {
+        localStorage.setItem('i18nextLng', language);
+      })
+      .catch((error) => {
+        console.error("Language change error:", error);
+      });
+  };
+
   return (
     <div id="header">
       <div id="logo">
         <Link to="/"><img src={logo} alt="Logo" /></Link>
+      </div>
+      <div className="languages-container">
+      <button onClick={() => handleLanguageChange('fi')}>🇫🇮 Suomi</button>
+      <button onClick={() => handleLanguageChange('en')}>🇬🇧 English</button>
       </div>
       <div id="burger-container">
         {/* Show menu icon only on small screens */}

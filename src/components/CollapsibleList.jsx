@@ -1,13 +1,15 @@
 import "./CollapsibleList.css";
-import Collapsible from 'react-collapsible';
+//import Collapsible from 'react-collapsible';
 import { ChevronDown, ChevronUp } from "react-feather";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function CollapsibleList() {
-  //const items = ["Sähkö", "Mekaniikka", "Hydrauliikka", "Pneumatiikka", "Prosessiteollisuus", "Tuotantolaitteet", "Sähkönjakelujärjestelmät"];
   const [openIndex, setOpenIndex] = useState(null);
 
-  const listItems = [
+  const { t } = useTranslation();
+
+  /* const listItems = [
     {
       title: "Sähkö",
       content: [
@@ -30,9 +32,9 @@ export default function CollapsibleList() {
     {
       title: "Hydrauliikka",
       content: [
-        "Hydrauliset linjat",
-        "Pumppujen huolto",
-        "Varaosat",
+        "Painesäädöt",
+        "Painemittaukset",
+        "Hydrauliikkakaaviot",
       ],
     },
     {
@@ -64,13 +66,24 @@ export default function CollapsibleList() {
         "Uunit",
         "Ohjaukset",
         "Korjaukset",
-        "vianhaku",
+        "Vianhaku",
         "Huollot",
         "Säädöt",
         "Modernisoinnit",
       ]
+    },
+    {
+      title: "Sähkönjakelujärjestelmät",
+      content: [
+        "Sähköasennukset",
+        "Sähköasennustarkastukset",
+        "Akustojen testaukset, huollot",
+        "Sähkölaitteiston kuntokartoitukset",
+      ]
     }
-  ];
+  ]; */
+
+  const listItems = t('listItems', { returnObjects: true });
 
   const toggleItem = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -95,8 +108,8 @@ export default function CollapsibleList() {
           >
             {openIndex === index && (
               <ul className="collapsible-list">
-                {item.content.map((contentItem, index) => (
-                  <li key={index} className="collapsible-list-item">{contentItem}</li>
+                {item.content.map((contentItem, idx) => (
+                  <li key={idx} className="collapsible-list-item">{contentItem}</li>
                 ))}
               </ul>
             )}

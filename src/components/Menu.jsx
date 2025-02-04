@@ -2,10 +2,13 @@ import "./Menu.css";
 import { useEffect, useRef } from "react";
 import MenuItem from "./MenuItem";
 import { v4 as uuidv4 } from "uuid";
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function Menu({ setIsMenuOpen }) {
-  const menuItems = [{ text: "Etusivu", link: "/"}, { text: "Palvelut", link: "/Palvelut" }, { text: "Tietoja", link: "/Tietoja"}];
+  const menuItems = [{ text: <Trans i18nKey="home" key="i18n.language" />, link: "/"}, { text: <Trans i18nKey="services" key="i18n.language" />, link: "/Palvelut" }, { text: <Trans i18nKey="about" key="i18n.language" />, link: "/Tietoja"}];
   const menuRef = useRef();
+
+  const { i18n } = useTranslation();
 
     // Click/touch outside the dropdown menu closes the dropdown menu
     useEffect(() => {

@@ -22,7 +22,7 @@ export default function Footer() {
         <p id="companyID">Y-tunnus: 1975726-5</p>
       </div>
       <div className="maker-container">
-      <p id="maker">Copyright 2025 © <a href={MADomain} target="_blank">Miia Arkko</a></p>
+        <p id="maker">Copyright 2025 © <a href={MADomain} target="_blank">Miia Arkko</a></p>
       </div>
     </div>
   );

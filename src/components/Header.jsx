@@ -41,10 +41,17 @@ export default function Header() {
         <Link to="/"><img src={logo} alt="Logo" /></Link>
       </div>
       <div className="languages-container">
-      <button onClick={() => handleLanguageChange('fi')}>🇫🇮 Suomi</button>
-      <button onClick={() => handleLanguageChange('en')}>🇬🇧 English</button>
+{/*         <button onClick={() => handleLanguageChange('fi')}>🇫🇮 Suomi</button>
+        <button onClick={() => handleLanguageChange('en')}>🇬🇧 English</button> */}
+        <select value={i18n.language} onChange={(e) => handleLanguageChange(e.target.value)}>
+          <option value="fi">🇫🇮 Suomi</option>
+          <option value="en">🇬🇧 English</option>
+        </select>
+
       </div>
+
       <div id="burger-container">
+
         {/* Show menu icon only on small screens */}
         <div className="menu-icon-container">
           {isMenuOpen ? (
@@ -53,6 +60,7 @@ export default function Header() {
             <FiMenu className="menu-icon" onClick={handleMenuClick} />
           )}
         </div>
+
         {/* Conditionally render the Menu on small screens */}
         {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
       </div>

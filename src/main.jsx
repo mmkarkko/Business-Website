@@ -1,40 +1,9 @@
-import ReactDOM from 'react-dom/client'
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from './pages/HomePage.jsx';
-import ServicesPage from './pages/ServicesPage.jsx';
-import ErrorPage from './pages/ErrorPage.jsx';
-import App from './App.jsx';
+// main.jsx
+import ReactDOM from 'react-dom/client';
+import RouterWrapper from './RouterWrapper';
 import "./variables.css";
 import 'animate.css';
-import InfoPage from './pages/InfoPage.jsx';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />
-      },
-      {
-         path: "palvelut",
-        element: <ServicesPage />
-      },
-      {
-        path: "tietoja",
-        element: <InfoPage />
-      }
-    ]
-  }
-]);
 
 ReactDOM
-    .createRoot(document.getElementById("root")).render(
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
-    );
-    
+  .createRoot(document.getElementById("root"))
+  .render(<RouterWrapper />);

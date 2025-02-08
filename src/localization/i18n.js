@@ -29,7 +29,7 @@ i18n
                 "Logiikat",
                 "Hätäseis-järjestelmät",
                 "Ajastukset",
-                "Askelmoottorit"
+                "Askelmoottorit",
               ]
             },
             {
@@ -37,7 +37,7 @@ i18n
               "content": [
                 "Linjaukset",
                 "Laakeroinnit",
-                "Pienet metallityöt"
+                "Pienet metallityöt",
               ]
             },
             {
@@ -45,7 +45,7 @@ i18n
               "content": [
                 "Painesäädöt",
                 "Painemittaukset",
-                "Hydrauliikkakaaviot"
+                "Hydrauliikkakaaviot",
               ]
             },
             {
@@ -53,19 +53,19 @@ i18n
               "content": [
                 "Mittaukset",
                 "Paineilmaohjaukset",
-                "Paineilmalogiikat"
+                "Paineilmalogiikat",
               ]
             },
             {
               "title": "Prosessiteollisuus",
               "content": [
-                "Kappaletavara-automaatio",
+                "Prosessiautomaatio",
                 "Taajuusmuuttajat",
                 "Vianhaku",
                 "Korjaukset",
                 "Huollot",
                 "Säädöt",
-                "Modernisoinnit"
+                "Modernisoinnit",
               ]
             },
             {
@@ -80,7 +80,7 @@ i18n
                 "Vianhaku",
                 "Huollot",
                 "Säädöt",
-                "Modernisoinnit"
+                "Modernisoinnit",
               ]
             },
             {
@@ -89,7 +89,7 @@ i18n
                 "Sähköasennukset",
                 "Sähköasennustarkastukset",
                 "Akustojen testaukset, huollot",
-                "Sähkölaitteiston kuntokartoitukset"
+                "Sähkölaitteiston kuntokartoitukset",
               ]
             }
           ]
@@ -117,7 +117,7 @@ i18n
                 "Logics",
                 "Emergency stop systems",
                 "Timers",
-                "Step motors"
+                "Step motors",
               ]
             },
             {
@@ -125,35 +125,35 @@ i18n
               "content": [
                 "Alignments",
                 "Bearings",
-                "Small metal works"
+                "Small metal works",
               ]
             },
             {
               "title": "Hydraulics",
               "content": [
-                "Pressure settings",
+                "Pressure controls",
                 "Pressure measurements",
-                "Hydraulic diagrams"
+                "Hydraulic diagrams",
               ]
             },
             {
               "title": "Pneumatics",
               "content": [
-                "Measurements",
-                "Pneumatic controls",
-                "Pneumatic logics"
+                "Comressed air controls",
+                "Pneumatic measurements",
+                "Compressed air logics",
               ]
             },
             {
               "title": "Process industry",
               "content": [
-                "Piece goods automation",
+                "Process automation",
                 "Frequency converters",
                 "Troubleshooting",
                 "Repairs",
                 "Maintenance",
                 "Adjustments",
-                "Modernizations"
+                "Modernizations",
               ]
             },
             {
@@ -161,14 +161,14 @@ i18n
               "content": [
                 "CNC machine tools",
                 "Robots",
-                "Magnetizing equipment",
+                "Magnetizing devices",
                 "Furnaces",
                 "Controls",
                 "Repairs",
                 "Troubleshooting",
                 "Maintenance",
                 "Adjustments",
-                "Modernizations"
+                "Modernizations",
               ]
             },
             {
@@ -176,8 +176,8 @@ i18n
               "content": [
                 "Electrical installations",
                 "Electrical inspection",
-                "Battery tests, maintenance",
-                "Electrical equipment condition assessments"
+                "Battery testing, maintenance",
+                "Condition survey of electrical equipment",
               ]
             }
           ]

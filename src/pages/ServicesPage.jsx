@@ -2,9 +2,14 @@ import "../styles.css";
 import "./servicesPage.css";
 import CollapsibleList from "../components/CollapsibleList";
 import { Trans, useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default function ServicesPage() {
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="servicesPage">

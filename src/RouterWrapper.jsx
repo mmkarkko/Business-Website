@@ -11,7 +11,7 @@ const RouterWrapper = () => {
   const { t } = useTranslation();
   
   const router = React.useMemo(() => {
-    // Määritellään reitit molemmille kielille
+    // Define routes
     const routes = {
       services: t("services").toLowerCase(),
       about: t("about").toLowerCase()
@@ -35,7 +35,6 @@ const RouterWrapper = () => {
             path: routes.about,
             element: <InfoPage />
           },
-          // Lisätään uudelleenohjaukset vanhoille reiteille
           {
             path: "services",
             element: <Navigate to={`/${routes.services}`} replace />

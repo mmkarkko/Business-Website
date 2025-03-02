@@ -16,10 +16,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.languages-container {
-  margin-bottom: 1rem;
-}
-
 .languages-container select {
   padding: 0.5rem;
   border-radius: 4px;

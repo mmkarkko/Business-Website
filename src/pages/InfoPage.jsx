@@ -20,11 +20,7 @@ export default function InfoPage() {
         <p className="info-text">
           <Trans i18nKey="about-text-lower" key="i18n.language" components={{ strong: <strong/>}} />
         </p>
-        </div>
-      <div className="info-right">
-        
-        </div>
-
+      </div>
     </div>
   );
 }

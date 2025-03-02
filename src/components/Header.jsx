@@ -13,8 +13,6 @@ export default function Header() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const currentLanguage = i18n.language;
-    console.log(`Current language: ${currentLanguage}`);
   }, [i18n.language]);
 
   useEffect(() => {
@@ -45,10 +43,10 @@ export default function Header() {
 
       <div id="right-header">
         <div className="languages-container wide-languages">
-        <select value={i18n.language} onChange={(e) => handleLanguageChange(e.target.value)}>
-            <option value="fi">🇫🇮 Suomi</option>
-            <option value="en">🇬🇧 English</option>
-          </select>
+          <select value={i18n.language} onChange={(e) => handleLanguageChange(e.target.value)}>
+              <option value="fi">🇫🇮 Suomi</option>
+              <option value="en">🇬🇧 English</option>
+            </select>
         </div>
   
         <div id="burger-container">

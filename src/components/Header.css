@@ -28,7 +28,6 @@
 }
 
 .languages-container select {
-  padding: 0.3rem;
   border-radius: 4px;
   font-family: var(--font-body);
   cursor: pointer;
@@ -39,25 +38,28 @@
 }
 
 .menu-icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  cursor: pointer;
+  height: 2.8rem;
+  width: 2.8rem;
   color: var(--color-primary-dark);
 }
 
-@media screen and (max-width: 1024px) {
-  #burger-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .wide-languages {
-    display: none;
-  }
-  
-  .mobile-languages {
-    display: flex;
-    margin-right: 1rem;
-  }
+.menu-icon-container {
+  display: flex;
+}
+
+#burger-container {
+  display: flex;
+  align-items: center;
+}
+
+.wide-languages {
+  display: none;
+}
+
+.mobile-languages {
+  display: flex;
+  margin-right: 1rem;
 }
 
 @media screen and (min-width: 1025px) {

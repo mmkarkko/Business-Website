@@ -22,7 +22,7 @@ export default function HomePage() {
           <Trans i18nKey="hero-text-upper" key="i18n.language" components={{ strong: <strong />}} />
         </div>
         
-        <p className="hero-text">
+        <p className="hero-text hero-text-lower">
           <Trans i18nKey="hero-text-lower" key="i18n.language" components={{ strong: <strong />}} />
         </p>
         
@@ -35,8 +35,6 @@ export default function HomePage() {
                 <TbBolt />
               </div>
               <h3 className="service-title">{t("listItems.0.title")}</h3>
-              <p>{t("listItems.0.content.0")}</p>
-              <p>{t("listItems.0.content.1")}</p>
             </div>
             
             <div className="service-card">
@@ -44,8 +42,6 @@ export default function HomePage() {
                 <TbRobot />
               </div>
               <h3 className="service-title">{t("listItems.5.title")}</h3>
-              <p>{t("listItems.5.content.0")}</p>
-              <p>{t("listItems.5.content.1")}</p>
             </div>
             
             <div className="service-card">
@@ -53,8 +49,6 @@ export default function HomePage() {
                 <TbTools />
               </div>
               <h3 className="service-title">{t("listItems.4.title")}</h3>
-              <p>{t("listItems.4.content.0")}</p>
-              <p>{t("listItems.4.content.1")}</p>
             </div>
           </div>
           

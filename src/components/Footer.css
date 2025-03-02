@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   grid-area: footer;
-  width: 100vw;
+  width: 100%;
   padding-top: 1rem;
 }
 
@@ -40,4 +40,10 @@
 #maker  {
   font-size: var(--font-size-body);
   margin-bottom: 1rem;
+}
+
+.privacy-notice {
+  font-size: var(--font-size-small-text);
+  margin-top: 0.5rem;
+  opacity: 0.8;
 }

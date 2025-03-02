@@ -2,23 +2,23 @@
 
 .servicesPage {
   grid-area: main;
-  margin-top: 1rem;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .services-intro {
   width: 100%;
-  max-width: 800px;
-  padding: 0 1.5rem;
-  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 1rem;
+  margin: 1.5rem 0;
   text-align: center;
-  margin: 0 0 2rem 0;
   line-height: 1.6;
 }
 
@@ -27,64 +27,91 @@
 }
 
 #services-header {
-  margin: 2rem 0;
+  font-size: var(--font-size-subheading);
+}
+
+#collapsible-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.collapsible-item {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collapsible-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.collapsible-header {
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible-content.open {
+  border-radius: 0 0 8px 8px;
+  padding-bottom: 0.5rem;
+}
+
+.collapsible-list {
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+
+.collapsible-list-item {
+  padding: 0.6rem 0.5rem;
+  font-size: var(--font-size-body);
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  #collapsible-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
+  .services-intro {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1025px) {
   .servicesPage {
-    max-width: 100%;
-    overflow-x: hidden;
+    padding: 0 2rem;
   }
 
   .services-intro {
-    width: 70%;
-    max-width: 900px;
-    margin: 0 auto;
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    margin: 2.5rem 0;
   }
-  
+
   #collapsible-container {
     width: 70%;
-    max-width: 900px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
   }
-  
-  .collapsible-item {
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .collapsible-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
+
   .collapsible-header {
     padding: 1.2rem 1.5rem;
-    border-radius: 8px 8px 0 0;
-    font-size: 1.2rem;
+    font-size: var(--font-size-xlarge);
   }
-  
-  .collapsible-content.open {
-    border-radius: 0 0 8px 8px;
-    padding-bottom: 0.5rem;
-  }
-  
+
   .collapsible-list {
     padding: 0.5rem 0 0.5rem 2.5rem;
   }
-  
+
   .collapsible-list-item {
     padding: 0.7rem 0.5rem;
-    font-size: 1.05rem;
+    font-size: var(--font-size-body-xlarge);
   }
 }

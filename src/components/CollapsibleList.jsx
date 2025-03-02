@@ -1,12 +1,12 @@
 import "./CollapsibleList.css";
-//import Collapsible from 'react-collapsible';
 import { ChevronDown, ChevronUp } from "react-feather";
-import { useState } from "react";
+import { useState, useId } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function CollapsibleList() {
   const [openIndex, setOpenIndex] = useState(null);
   const { t } = useTranslation();
+  const baseId = useId().replace(/:/g, "");
 
   const listItems = t('listItems', { returnObjects: true });
 
@@ -16,31 +16,50 @@ export default function CollapsibleList() {
 
   return (
     <div id="collapsible-container">
-      {listItems.map((item, index) => (
-        <div
-          key={index}
-          className={`collapsible-item ${openIndex === index ? 'open' : ''}`}
-        >
+      {listItems.map((item, index) => {
+        const headerId = `header-${baseId}-${index}`;
+        const contentId = `content-${baseId}-${index}`;
+        const isOpen = openIndex === index;
+        
+        return (
           <div
-            onClick={() => toggleItem(index)}
-            className="collapsible-header"
+            key={index}
+            className={`collapsible-item ${isOpen ? 'open' : ''}`}
           >
-            <span>{item.title}</span>
-            {openIndex === index ? <ChevronUp size={30} /> : <ChevronDown size={30} />}
+            <div
+              id={headerId}
+              onClick={() => toggleItem(index)}
+              className="collapsible-header"
+              role="button"
+              aria-expanded={isOpen}
+              aria-controls={contentId}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  toggleItem(index);
+                  e.preventDefault();
+                }
+              }}
+            >
+              <span>{item.title}</span>
+              {isOpen ? <ChevronUp size={30} /> : <ChevronDown size={30} />}
+            </div>
+            <div 
+              id={contentId}
+              className={`collapsible-content ${isOpen ? 'open' : ''}`}
+              aria-labelledby={headerId}
+            >
+              <div className="content-inner">
+                <ul className="collapsible-list">
+                  {item.content.map((contentItem, idx) => (
+                    <li key={idx} className="collapsible-list-item">{contentItem}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div 
-            className={`collapsible-content ${openIndex === index ? 'open' : ''}`}
-          >
-            {openIndex === index && (
-              <ul className="collapsible-list">
-                {item.content.map((contentItem, idx) => (
-                  <li key={idx} className="collapsible-list-item">{contentItem}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
-  )
+  );
 }

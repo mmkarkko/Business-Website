@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
           
           <Link to={`/${t("services").toLowerCase()}`} className="cta-button">
-            {i18n.language === 'fi' ? 'Katso kaikki palvelut' : 'See all services'}
+            {i18n.language === 'fi' ? <Trans i18nKey="see-services" key="i18n.language" /> : <Trans i18nKey="see-services" key="i18n.language" />}
           </Link>
         </div>
       </div>

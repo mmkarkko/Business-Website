@@ -1,23 +1,28 @@
 .homePage {
   grid-area: main;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-row: 2;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%; /* Varmistetaan ettei sisältö karkaa */
+  overflow-x: hidden; /* Estetään horisontaalinen vieritys */
 }
 
 #orangeBar {
   background-color: var(--color-highlight);
   color: var(--color-primary);
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   text-align: center;
   padding: 1.5rem 0;
 }
 
 #frontPageImage {
-  width: 100vw;
+  width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 70% 50%;
@@ -29,8 +34,15 @@
   letter-spacing: 0.1rem;
 }
 
+.hero-container {
+  width: 100%;
+  padding: 0 1rem;
+}
+
 .hero-text {
   margin: 2rem 0;
+  font-size: var(--font-size-slogan);
+  text-align: center;
 }
 
 @media screen and (min-width: 1025px) {

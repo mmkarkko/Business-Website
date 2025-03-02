@@ -10,7 +10,7 @@ export default function InfoPage() {
       <h2 id="info-header">
         <Trans i18nKey="about" key="i18n.language" />
       </h2>
-      <div className="info-left">
+      <div className="info-container">
         <p className="info-text">
           <Trans i18nKey="about-text-upper" key="i18n.language" components={{ strong: <strong/>}} />
         </p>

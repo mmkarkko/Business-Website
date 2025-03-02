@@ -44,26 +44,35 @@ export default function Menu({ setIsMenuOpen }) {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      const isClickOnIcon = event.target.closest('.menuItem');
-      if (isClickOnIcon) return;
+      // Check, if click is inside MenuItem component
+      const isMenuItem = event.target.closest('.menuItem');
+      
+      // If click is inside MenuItem, do nothing
+      if (isMenuItem) {
+        return;
+      }
+      
+      // Otherwise, close the menu
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [setIsMenuOpen]);
 
   return (
     <div className="menu" ref={menuRef}>
       {menuItems.map((item) => (
-        <MenuItem key={uuid()} item={item} />
+        <MenuItem 
+          key={uuid()} 
+          item={item} 
+          setIsMenuOpen={setIsMenuOpen}
+        />
       ))}
     </div>
   );

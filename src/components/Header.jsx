@@ -37,37 +37,48 @@ export default function Header() {
 
   return (
     <div id="header">
-      <div id="logo">
-        <Link to="/"><img src={logo} alt="Logo" /></Link>
-      </div>
-      <div className="languages-container">
-{/*         <button onClick={() => handleLanguageChange('fi')}>🇫🇮 Suomi</button>
-        <button onClick={() => handleLanguageChange('en')}>🇬🇧 English</button> */}
-        <select value={i18n.language} onChange={(e) => handleLanguageChange(e.target.value)}>
-          <option value="fi">🇫🇮 Suomi</option>
-          <option value="en">🇬🇧 English</option>
-        </select>
-
-      </div>
-
-      <div id="burger-container">
-
-        {/* Show menu icon only on small screens */}
-        <div className="menu-icon-container">
-          {isMenuOpen ? (
-            <FiX className="menu-icon" onClick={handleMenuClick} />
-          ) : (
-            <FiMenu className="menu-icon" onClick={handleMenuClick} />
-          )}
+      <div id="left-header">
+        <div id="logo">
+          <Link to="/"><img src={logo} alt="Logo" /></Link>
         </div>
-
-        {/* Conditionally render the Menu on small screens */}
-        {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
       </div>
 
-      {/* On large screens, the Menu is always visible as horizontal navigation */}
-      <div className="desktop-menu">
-        <Menu setIsMenuOpen={setIsMenuOpen} />
+      <div id="right-header">
+        <div className="languages-container wide-languages">
+        <select value={i18n.language} onChange={(e) => handleLanguageChange(e.target.value)}>
+            <option value="fi">🇫🇮 Suomi</option>
+            <option value="en">🇬🇧 English</option>
+          </select>
+        </div>
+  
+        <div id="burger-container">
+          <div className="languages-container mobile-languages">
+            <select 
+              value={i18n.language} 
+              onChange={(e) => handleLanguageChange(e.target.value)}
+            >
+              <option value="fi">🇫🇮</option>
+              <option value="en">🇬🇧</option>
+            </select>
+          </div>
+  
+          {/* Show menu icon only on small screens */}
+          <div className="menu-icon-container">
+            {isMenuOpen ? (
+              <FiX className="menu-icon" onClick={handleMenuClick} />
+            ) : (
+              <FiMenu className="menu-icon" onClick={handleMenuClick} />
+            )}
+          </div>
+          
+          {/* Conditionally render the Menu on small screens */}
+          {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
+        </div>
+          
+        {/* On large screens, the Menu is always visible as horizontal navigation */}
+        <div className="desktop-menu">
+          <Menu setIsMenuOpen={setIsMenuOpen} />
+        </div>
       </div>
     </div>
   );

@@ -8,13 +8,25 @@
   font-weight: 600;
   color: var(--color-primary-dark);
   padding: 0.2rem 0;
+  cursor: pointer;
+}
+
+.menu-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.2rem 0;
+  width: 100%;
+}
+
+.menuItem.active, .menuItem a.active {
+  color: var(--color-highlight);
 }
 
 .menuItem.visited {
   color: var(--color-primary-dark);
 }
 
-/* Ensure horizontal layout for desktop */
 @media screen and (min-width: 1025px) {
   .menuItem {
     padding: 0.5rem 1.5rem;

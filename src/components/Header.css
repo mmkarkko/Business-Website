@@ -1,7 +1,7 @@
 @import "../variables.css";
 
 .desktop-menu {
-  display: none; /* Piilota vaakasuuntaiset menu-komponentit */
+  display: none;
 }
 
 #header {
@@ -13,18 +13,51 @@
   position: relative;
   max-width: 100vw;
   height: 5rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   z-index: 100;
 }
 
+#right-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.languages-container {
+  margin-right: 1rem;
+}
+
+.languages-container select {
+  padding: 0.3rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
 #logo img {
-  height: 3rem;
+  height: 2.7rem;
 }
 
 .menu-icon {
   height: 2.5rem;
   width: 2.5rem;
   color: var(--color-primary-dark);
+}
+
+@media screen and (max-width: 1024px) {
+  #burger-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .wide-languages {
+    display: none;
+  }
+  
+  .mobile-languages {
+    display: flex;
+    margin-right: 1rem;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -34,5 +67,19 @@
 
   .desktop-menu {
     display: flex;
+  }
+
+  #right-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .wide-languages {
+    display: flex;
+  }
+
+  .mobile-languages {
+    display: none;
   }
 }

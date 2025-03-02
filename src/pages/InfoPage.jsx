@@ -11,16 +11,16 @@ export default function InfoPage() {
         <Trans i18nKey="about" key="i18n.language" />
       </h2>
       <div className="info-left">
-      <p className="info-text">
-        <Trans i18nKey="about-text-upper" key="i18n.language" components={{ strong: <strong/>}} />
-      </p>
-      <p className="info-text">
-        <Trans i18nKey="about-text-middle" key="i18n.language" components={{ strong: <strong/>}} />
-      </p>
-      <p className="info-text">
-        <Trans i18nKey="about-text-lower" key="i18n.language" components={{ strong: <strong/>}} />
-      </p>
-      </div>
+        <p className="info-text">
+          <Trans i18nKey="about-text-upper" key="i18n.language" components={{ strong: <strong/>}} />
+        </p>
+        <p className="info-text">
+          <Trans i18nKey="about-text-middle" key="i18n.language" components={{ strong: <strong/>}} />
+        </p>
+        <p className="info-text">
+          <Trans i18nKey="about-text-lower" key="i18n.language" components={{ strong: <strong/>}} />
+        </p>
+        </div>
       <div className="info-right">
         
         </div>

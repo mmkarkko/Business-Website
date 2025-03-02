@@ -63,6 +63,10 @@
 }
 
 @media screen and (min-width: 1025px) {
+  #header {
+    margin-left: 4rem;
+  }
+
   #burger-container {
     display: none;
   }

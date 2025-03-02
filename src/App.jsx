@@ -13,13 +13,13 @@ const AppContent = () => {
   const location = useLocation();
   const [isTransitioning, setIsTransitioning] = useState(false);
   
-  // Seuraa URL:n muutoksia ja käynnistää latauksen
+  // Track URL changes and initiate loading
   useEffect(() => {
     setIsPageLoading(true);
     setIsTransitioning(true);
     
-    // Lataus loppuu, kun komponentit ovat valmiita
-    // Tämä suoritetaan seuraavassa render-syklissä
+    // Loading ends when components are ready
+    // This is executed in the next render cycle
     const timeout = requestAnimationFrame(() => {
       setIsPageLoading(false);
       setIsTransitioning(false);
@@ -32,7 +32,7 @@ const AppContent = () => {
     };
   }, [location.pathname, setIsPageLoading]);
 
-  // Näytetään latausanimaatio vain, jos kieli latautuu tai sivu on hitaassa siirtymässä
+  // Show loading animation only if language is loading or page is in slow transition
   const shouldShowLoading = isLanguageLoading || (isTransitioning && isLoading);
 
   return (

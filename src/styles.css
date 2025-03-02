@@ -60,13 +60,12 @@ p {
   z-index: 1000;
 }
 
-@media screen and (min-width: 469px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   body {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "header"
-      "content"
-      "content"
+      "main"
       "footer";
   }
 }

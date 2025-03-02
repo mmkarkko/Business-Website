@@ -6,17 +6,21 @@ import { AlertTriangle } from "react-feather";
 export default function ErrorPage() {
   const error = useRouteError();
   const { t } = useTranslation();
-  
-  console.error(error);
 
   let errorMessage;
   if (error?.status === 404) {
     // Extract URL from error message for 404s
     try {
-      errorMessage = error.data.includes('URL "') 
-        ? `${t("error-page-url")} "${error.data.split('URL "')[1].split('"')[0]}"`
-        : t("error-page-notFound");
+      const errorData = error?.data || '';
+      const urlMatch = errorData.match(/URL "([^"]+)"/);
+      
+      if (urlMatch && urlMatch[1]) {
+        errorMessage = `${t("error-page-url")} "${urlMatch[1]}"`;
+      } else {
+        errorMessage = t("error-page-notFound");
+      }
     } catch (e) {
+      console.error("Error parsing error message:", e);
       errorMessage = t("error-page-notFound");
     }
   } else {

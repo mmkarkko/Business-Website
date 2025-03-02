@@ -1,9 +1,72 @@
 @import '../variables.css';
 
 .errorPage {
+  grid-area: main;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vw;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  background-color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.errorTitle {
+  font-family: var(--font-headline);
+  color: var(--color-highlight);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.errorMessage {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-xlarge);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.errorImage {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+.errorBackLink {
+  display: inline-block;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  font-family: var(--font-headline);
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.errorBackLink:hover {
+  background-color: #E55A00;
+}
+
+@media screen and (min-width: 768px) {
+  .errorPage {
+    padding: 4rem 2rem;
+  }
+  
+  .errorTitle {
+    font-size: 2.5rem;
+  }
 }

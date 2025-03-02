@@ -20,6 +20,13 @@ i18n
           "about-text-lower": "Luotettavuus ja laadukas työnjälki ovat minulle ensiarvoisen tärkeitä. Jos etsit sähkö- ja automaatioalan asiantuntijaa, joka ymmärtää teollisuuden tarpeet, <strong>Arkkomatic</strong> on oikea valinta.",
           "see-services": "Katso kaikki palvelut",
           "services-text": "<strong>Arkkomatic</strong> tarjoaa monipuolisia sähkö- ja automaatiopalveluita teollisuuden tarpeisiin. Pitkällä kokemuksellani ja ammattitaidollani varmistan tuotantolaitteistojenne luotettavan toiminnan. <strong>Arkkomaticin</strong> palvelut kattavat kaiken suunnittelusta ja asennuksesta huoltoon ja vianetsintään.",
+          "error-page-404-title": "Sivua ei löydy",
+          "error-page-generic-title": "Hups, jokin meni pieleen",
+          "error-page-url": "Osoitteessa",
+          "error-page-notFound": "Hakemaasi sivua ei löydy tai se on siirretty.",
+          "error-page-unknown": "Tuntematon virhe tapahtui.",
+          "error-page-back": "Takaisin etusivulle",
+          "privacy-notice": "Tämä sivusto käyttää selaimen muistia vain kielivalinnan tallentamiseen.",
 
           // Finnish translations for the services list
           "listItems": [
@@ -110,6 +117,13 @@ i18n
           "about-text-lower": "Reliability and high-quality workmanship are of utmost importance to me. If you're looking for an expert in electrical and automation fields who understands the needs of the industry, <strong>Arkkomatic</strong> is the right choice.",
           "see-services": "See all services",
           "services-text": "<strong>Arkkomatic</strong> offers comprehensive electrical and automation services for industrial needs. The professional expertise and extensive experience of <strong>Arkkomatic</strong> ensure reliable operation of your production equipment. <strong>Arkkomatic</strong> services cover everything from design and installation to maintenance and troubleshooting.",
+          "error-page-404-title": "Page Not Found",
+          "error-page-generic-title": "Oops, Something Went Wrong",
+          "error-page-url": "At",
+          "error-page-notFound": "The page you were looking for doesn't exist or has been moved.",
+          "error-page-unknown": "An unknown error occurred.",
+          "error-page-back": "Back to Home",
+          "privacy-notice": "This website only uses browser storage to save your language preference.",
 
           // English translations for the list
           "listItems": [

@@ -32,7 +32,7 @@
   font-family: var(--font-headline);
   font-weight: 400;
   letter-spacing: 0.1rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-slogan);
 }
 
 .hero-container {
@@ -115,7 +115,7 @@
   font-family: var(--font-headline);
   color: var(--color-highlight);
   margin-bottom: 0.75rem;
-  font-size: 1.25rem;
+  font-size: var(--font-size-slogan);
 }
 
 .cta-button {
@@ -156,7 +156,7 @@
   }
 
   .slogan {
-    font-size: 1.75rem;
+    font-size: var(--font-size-slogan-xl);
   }
 
   .hero-container {
@@ -176,6 +176,6 @@
   
   .service-title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: var(--font-size-services);
   }
 }

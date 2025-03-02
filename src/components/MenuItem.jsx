@@ -20,6 +20,7 @@ export default function MenuItem({ item, setIsMenuOpen }) {
         to={item.link}
         className={isActive ? "menuItem active" : "menuItem"}
         onClick={handleClick}
+        aria-current={isActive ? "page" : undefined}
       >
         {item.text}
       </Link>

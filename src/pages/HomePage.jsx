@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import placeholder from "../assets/placeholder2.jpg";
+import frontPageimage from "../assets/home-page-illustrative-image.jpg";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { TbBolt, TbRobot, TbTools } from "react-icons/tb";
@@ -9,7 +9,7 @@ export default function HomePage() {
 
   return (
     <div className="homePage">
-      <img id="frontPageImage" src={placeholder} alt="Arkkomatic - sähköautomaatio" />
+      <img id="frontPageImage"  src={frontPageimage} alt="Arkkomatic - sähköautomaatio" loading="lazy" />
       
       <div id="orangeBar">
         <h3 className="animate__animated animate__fadeInDown animate__delay-2s slogan">

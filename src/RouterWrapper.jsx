@@ -11,7 +11,6 @@ const RouterWrapper = () => {
   const { t } = useTranslation();
   
   const router = React.useMemo(() => {
-    // Define routes
     const routes = {
       services: t("services").toLowerCase(),
       about: t("about").toLowerCase()

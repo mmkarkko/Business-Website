@@ -58,6 +58,15 @@
   padding-left: 2rem;
 }
 
+.collapsible-header:focus {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: -2px;
+}
+
+.collapsible-content:not(.open) .content-inner {
+  display: none;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
 }

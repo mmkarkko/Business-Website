@@ -1,9 +1,8 @@
 import "./InfoPage.css";
 import "../styles.css";
-import { Trans, useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 
 export default function InfoPage() {
-  const { i18n } = useTranslation();
 
   return (
     <div className="infoPage">
